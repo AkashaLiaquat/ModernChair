@@ -1,0 +1,539 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff;
+  height: 100vh;
+  width:100vw;
+  overflow-x: hidden;
+  z-index: -1;
+}
+.container{
+  margin:0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  width:60%;
+  padding:70px 0;
+  margin-left:230px;
+  position: relative;
+  z-index:5;
+  margin: 0 auto;
+}
+p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color:#fff;
+}
+.chair-wrap{
+  margin-top: 20px;
+  margin-left: -30px;
+  margin-right: 30px;
+}
+
+/*Type selector*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+  position:absolute;
+  visibility: hidden;
+}
+
+/* adjacent sibling selector (+) , mean nearest 
+label sibling close to .color*/
+ .color:checked +label,
+ .color:not(:checked)+label  {
+  border-radius:4px;
+  border:none;
+  display: inline-block;
+  width:40px;
+  height:40px;
+  border:3px solid transparent;
+  overflow: hidden;
+  cursor:pointer;
+  color:#ffeba7;
+  margin-right:10px;
+  box-shadow: 0 12px 35px rgba(69,39,112,0.25);
+  background-position: center;
+  background-size: cover;
+  transition: all 200ms linear;
+}
+
+.color:checked + label{
+  border-color: #434343;
+  transform: scale(1.1);
+}
+.color1{
+   background-image: url(images/color1.jpg);
+}
+.color2{
+  background-image: url(images/color2.jpg);
+}
+.color3{
+  background-image: url(images/color3.jpg);
+}
+.color4{
+  background-image: url(images/color4.jpg);
+}
+.color5{
+  background-image: url(images/color5.jpg);
+}
+.color6{
+  background-image: url(images/color6.jpg);
+}
+.chair-wrap{
+  height:410px;
+  width:500px;
+  background-position: center;
+  background-size: 100%;/*OR Cover*/
+  background-repeat: no-repeat;
+  background-image: url(images/chair1.png);
+  transition: all 550ms linear;
+  transition-delay: 100ms;
+  opacity: 0;
+}
+
+
+/* ~ is general sibling selector mean select all classes with name*/
+.forcolor1:checked ~ .chair-wrap{
+  animation: shake0 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both ;
+opacity:1;
+ 
+}
+.forcolor2:checked ~ .chair-wrap{
+  animation:none;
+  animation: shake1 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both ;/*dont return
+  to original posiion both forward and backward ~ both */
+
+  background-image: url(images/chair2.png);
+  opacity:1 ;}
+
+.forcolor3:checked ~ .chair-wrap{
+  animation:none;
+  animation: shake2 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  background-image: url(images/chair3.png);
+  opacity:1 ;
+  }
+.forcolor4:checked ~ .chair-wrap{
+  animation:none;
+  animation: shake3 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both ;
+  background-image: url(images/chair4.png);
+  opacity:1 ;
+  }
+.forcolor5:checked ~ .chair-wrap{
+  animation:none;
+  animation: shake4 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both ;
+  background-image: url(images/chair5.png);
+  opacity:1 ;
+   
+  }
+.forcolor6:checked ~ .chair-wrap{
+  animation:none;
+  animation: shake5 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both ;
+  background-image: url(images/chair6.png);
+  opacity:1 ;
+  
+  }
+
+
+@keyframes shake0 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+@keyframes shake1 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+@keyframes shake2 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+@keyframes shake3 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+@keyframes shake4 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+@keyframes shake5 {
+  10%,
+  90%{
+    transform: translate3d(-1px,0,0) rotate(-1deg);
+  }
+  20%,
+  80%{
+    transform: translate3d(2px,0,0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70%{
+    transform: translate3d(-3px,0,0) rotate(-3deg);
+  }
+  40%,
+  60%{
+    transform: translate3d(3px,0,0) rotate(3deg);
+  }
+}
+.bg-color{
+  position: fixed;/*fixed is for no scroll*/
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: linear-gradient(190deg,#f1a9a9,#e66767);
+  transition: all 250ms linear;
+  transition-delay: 300ms;
+  z-index: -3;
+  opacity: 0;
+}
+
+.forcolor1:checked ~ .bg-color{
+  opacity: 1;
+}
+.forcolor2:checked ~ .bg-color{
+  background-image: linear-gradient(196deg,#4c4c4c,#262626);
+  opacity: 1;
+}
+.forcolor3:checked ~ .bg-color{
+  background-image: linear-gradient(196deg,#809fb2,#5f7991);
+  opacity: 1;
+}
+.forcolor4:checked ~ .bg-color{
+  background-image: linear-gradient(196deg,#97afc3,#6789a7);
+  opacity: 1;
+}
+.forcolor5:checked ~ .bg-color{
+  background-image: linear-gradient(196deg,#afa6a0,#8c7f76);
+  opacity: 1;
+}
+.forcolor6:checked ~ .bg-color{
+  background-image: linear-gradient(196deg,#aaadac,#838786);
+  opacity: 1;
+}
+.subject{
+  font-weight:700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.heading{
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.price{
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.price> span{
+ text-decoration: line-through;
+ font-size: 20px;
+ opacity: 0.6;
+ padding-left: 15px;
+}
+.left>p{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.description-btn:checked + label,
+.description-btn:not(:checked) + label{
+  display: inline-block;
+  cursor:pointer;
+  color:#ffeba7;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-right: 25px;
+  opacity: 0.5;
+  transition: all 200ms linear;
+}
+.description-btn:checked + label
+/* if desiription button is checked make it's label's opacity 1*/
+{
+  opacity: 1;
+}
+.description-btn:not(:checked) +label:hover{
+  opacity: 0.8;
+}
+.d1,.d2,.d3,.d4{
+display: flex;
+flex-direction: column;
+}
+.desc-specif{
+  margin-top: -140px;
+}
+.magnitude{
+  font-size: 30px;
+  line-height: 1.2;
+}
+.desc-para{
+  margin-bottom:20px;
+}
+.desc-slide{
+  display: flex;
+  gap:20px;
+
+  padding-top: 20px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(20px);/*slide from bottom to top y direction*/
+  transition: all 250ms linear;
+  opacity: 0;
+}
+
+#desc:checked ~ .desc-para{
+ opacity: 1;
+ pointer-events: auto;
+ transform: translate(0);/*start from 0px*/
+}
+#details:checked ~ .desc-specif{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(0);/*start from 0px*/
+ }
+ .btn{
+  height: 48px;
+  width:210px;
+  border-radius: 4px;
+  border:none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+  transition: all 250ms linear;
+  position: relative;
+  margin-top: 25px;
+ }
+ .btn a{
+  text-decoration: none;
+  color:#fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 1px;
+ }
+ .btn:before{
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: #4c4c4c;
+  transition: background-color 250ms 300ms ease;
+  z-index: -1;
+ }
+ .icon{
+  padding-right:10px;
+  font-size: 20px;
+ }
+ @media screen and (max-width:1116px) {
+  .wrapper{
+    flex-direction: column;
+  }
+ .right{
+  margin-bottom:75px;
+ }
+ .desc-para{
+  width:60%;
+ }
+ }
+ @media screen and (max-width:725px) 
+  {
+   .chair-wrap{
+    width:400px;
+    height:310;
+   }
+   .heading{
+    font-size: 27px;
+   }
+   .price{
+    font-size: 20px;
+   }
+   .price>span{
+    font-size: 16px;
+   }
+   .magnitude{
+    font-size: 25px;
+    line-height: 1.2;
+   }
+   body{
+    font-size: 14px;
+   }
+  p{
+    font-size: 14px;
+  }
+  .container{
+    width:500px;
+  }
+   .wrapper{
+    width:100%;
+    margin-left: 20px;
+   }
+ }
+ @media screen and (max-width:330px){
+  .chair-wrap{
+    width:400px;
+    height:310;
+   }
+   .subject{
+    font-size: 25px;
+   }
+   .heading{
+    font-size: 35px;
+   }
+   .price{
+    font-size: 27px;
+   }
+   .price>span{
+    font-size: 22px;
+   }
+   .magnitude{
+    font-size: 28px;
+    line-height: 1.2;
+   }
+   body{
+    font-size: 14px;
+   }
+  p{
+    font-size: 25px;
+  }
+  .container{
+    width:500px;
+  }
+   .wrapper{
+    width:100%;
+    margin-left: 20px;
+   }
+   sub{
+    font-size: 20px;
+   }
+   .length,.width,.height,.weight{
+    font-size:20px;
+   }
+   .description-btn:checked + label,
+   .description-btn:not(:checked) + label{
+    font-size: 30px;
+   }
+   .btn>a{
+    font-size: 20px;
+   }
+   #choose{
+    font-size: 25px;
+   }
+ } 
+ @media screen and (max-width:731px) {
+  .desc-para{
+    width: 60%;
+  }
+ }
+ @media screen and (max-width:330px){
+   .desc-para{
+    width:100%;
+    margin-right:20px;
+   }
+   .desc-specif{
+    margin-top:-200px;}
+    .btn{
+      margin-top:50px;
+    }
+ }
